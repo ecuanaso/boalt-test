@@ -1,19 +1,38 @@
-﻿<!-- nav -->
-<nav class="navbar navbar-expand navbar-white bg-white" *ngIf="currentUser">
-    <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/">Home</a>
-        <a class="nav-item nav-link" (click)="logout()">Logout</a>
-    </div>
-</nav>
+﻿
 
 <!-- main app container -->
-<div class="jumbotron">
+
     <div class="container">
+        <!-- nav -->
+    <nav class="navbar navbar-expand navbar-white bg-white" *ngIf="currentUser">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" routerLink="/">Home</a>
+            <a class="nav-item nav-link" (click)="logout()">Logout</a>
+        
+        </div>
+        <ul class="navbar-nav ml-auto links">
+            <li class="nav-item">
+                <a class="nav-item nav-link text-secondary" href="">
+                    iPhone
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link text-dark macbook-pro" href="">
+                    MacBook Pro
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link text-secondary" href="">
+                    Watch
+                </a>
+            </li>
+            <button class="btn btn-outline-default my-2 my-sm-0 notify-me">Notify Me</button>
+        </ul>
+    </nav>
         <div class="row">
-            <div class="col-sm-6 offset-sm-3">
+            <div class="col-sm-12">
                 <alert></alert>
                 <router-outlet></router-outlet>
             </div>
         </div>
     </div>
-</div>
